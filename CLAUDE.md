@@ -14,12 +14,22 @@ Two brands, one site:
 /books/warborn-protocols/                                  → series landing
 /books/warborn-protocols/fleet-school-dropout.html         → book detail
 /books/weaving-eternal-tapestry.html                       → standalone book detail
+/apps/                                                     → all-apps index
+/apps/libraryiq.html                                       → app detail
+/apps/matcalc.html                                         → app detail
+/apps/simmer.html                                          → app detail
 /privacy-policy.html                                       → legal (used by app store listings)
 /terms.html                                                → legal (used by app store listings)
 /sitemap.xml · /robots.txt                                 → SEO
 ```
 
-URL pattern books: `/books/<series-slug>/<book-slug>.html` for series, `/books/<book-slug>.html` for standalone. Don't shorten slugs → SEO match titles. New book in existing series → drop in series folder. New series → new folder under `/books/`.
+URL patterns:
+- Books: `/books/<series-slug>/<book-slug>.html` for series, `/books/<book-slug>.html` for standalone. Don't shorten slugs → SEO match titles. New book in existing series → drop in series folder. New series → new folder under `/books/`.
+- Apps: `/apps/<app-slug>.html` flat. No series concept. Icons live `/images/apps/<app-slug>.png` (square 512+ source).
+
+App copy must match official Play Store listings exactly (taglines, feature lists, pricing). Pull from each app repo's `store-assets/store-listing.txt` or equivalent. Don't paraphrase — Safe Browsing classifiers flag mismatched promises.
+
+Apps in alpha → mark "Closed alpha" in meta + body. CTAs = `mailto:info@inknironapps.com?subject=<app>%20alpha%20tester`. NO fake Play Store links until app actually published.
 
 ## Branch strategy (overrides global)
 
@@ -43,6 +53,8 @@ Every page must have:
   - `/books/` → `CollectionPage` + `BreadcrumbList`
   - Series page → `BookSeries` + `BreadcrumbList`
   - Book detail → `Book` (with `workExample` per edition, ASIN as isbn) + `BreadcrumbList`
+  - `/apps/` → `CollectionPage` (hasPart = `SoftwareApplication[]`) + `BreadcrumbList`
+  - App detail → `SoftwareApplication` (operatingSystem, applicationCategory, publisher, author) + `BreadcrumbList`
   - Legal → canonical only
 
 New page → register in `sitemap.xml`. Update `lastmod` on changed pages.
