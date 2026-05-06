@@ -75,3 +75,27 @@ Privacy · Terms · © 2026
 ## Domain
 
 CNAME = `inknironapps.com`. Don't replace with apex/www variant unless DNS confirmed.
+
+Brand-name domain `inkniron.com` is **taken** (active Ink-N-Iron landing). "Apps" suffix on current domain disambiguates from established Ink-N-Iron festival/magazine/tattoo cluster — keep it.
+
+## Email plan (NOT YET PROVISIONED — hold)
+
+Currently single mailbox: `info@inknironapps.com`. Author uses `rileye.antrobus@gmail.com` directly.
+
+When ready to expand, set up these as **aliases** (not separate mailboxes) all forwarding → one inbox. Free with Workspace/Fastmail/Zoho/Cloudflare email routing.
+
+```
+info@inknironapps.com      → primary  (general / workshop, current footers)
+support@inknironapps.com   → primary  (app user issues — Play Store + App Store want this)
+privacy@inknironapps.com   → primary  (privacy policy contact, GDPR/CCPA)
+riley@inknironapps.com     → primary  (replaces rileye.antrobus@gmail.com on site)
+noreply@inknironapps.com   → app outbound only (transactional sends)
+```
+
+Skip `legal@`, `press@`, `hello@`, `contact@`, `careers@` until actual need arises.
+
+When provisioned, site updates needed:
+- Privacy policy contact → `privacy@inknironapps.com`
+- Author contact (book detail cards + home About section) → `riley@inknironapps.com`
+- Apps Settings "Send Feedback" deep links → `support@inknironapps.com`
+- Footer keeps `info@`
