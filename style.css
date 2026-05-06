@@ -56,13 +56,13 @@ nav ul a:hover { color: var(--paper); }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 90vh;
+  min-height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 80px 24px;
+  padding: 56px 24px;
   position: relative;
   overflow: hidden;
 }
@@ -88,9 +88,9 @@ nav ul a:hover { color: var(--paper); }
 }
 
 .hero-mark {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 40px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 28px;
   position: relative;
 }
 
@@ -128,7 +128,7 @@ section h2 .amp { font-style: italic; color: var(--teal-bright); font-weight: 50
   width: 60px;
   height: 1px;
   background: var(--teal);
-  margin: 32px auto;
+  margin: 20px auto;
   position: relative;
 }
 
@@ -169,7 +169,7 @@ section h2 .amp { font-style: italic; color: var(--teal-bright); font-weight: 50
 section {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 130px 56px;
+  padding: 72px 56px;
   border-top: 1px solid rgba(232, 228, 218, 0.06);
 }
 
@@ -187,7 +187,7 @@ section h2 {
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 72px;
+  margin-bottom: 40px;
   max-width: 720px;
 }
 section h2 em { color: var(--teal-light); }
@@ -221,15 +221,15 @@ section h2 em { color: var(--teal-light); }
 .lede {
   max-width: 680px;
   font-size: 21px;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--paper);
-  margin-top: -40px;
-  margin-bottom: 64px;
+  margin-top: -20px;
+  margin-bottom: 36px;
 }
 
 /* Section foot — small CTA row under cols */
 .section-foot {
-  margin-top: 56px;
+  margin-top: 32px;
   font-family: 'Inter', sans-serif;
 }
 .link-arrow {
@@ -319,9 +319,9 @@ a.col:hover h3 { color: var(--teal-bright); }
 .book-card {
   display: grid;
   grid-template-columns: 200px 1fr;
-  gap: 40px;
-  padding: 32px;
-  margin: 0 0 32px;
+  gap: 36px;
+  padding: 28px;
+  margin: 0 0 20px;
   border: 1px solid rgba(232, 228, 218, 0.08);
   background: rgba(9, 95, 115, 0.02);
   color: inherit;
@@ -412,7 +412,7 @@ a.col:hover h3 { color: var(--teal-bright); }
 }
 
 /* ---------- Book detail page ---------- */
-.book-detail { padding: 80px 56px 130px; max-width: 1080px; margin: 0 auto; border-top: none; }
+.book-detail { padding: 56px 56px 72px; max-width: 1080px; margin: 0 auto; border-top: none; }
 .book-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -467,9 +467,9 @@ a.col:hover h3 { color: var(--teal-bright); }
 .app-card {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: 32px;
-  padding: 28px;
-  margin: 0 0 24px;
+  gap: 28px;
+  padding: 24px;
+  margin: 0 0 16px;
   border: 1px solid rgba(232, 228, 218, 0.08);
   background: rgba(9, 95, 115, 0.02);
   color: inherit;
@@ -548,16 +548,16 @@ footer .amp {
 @media (max-width: 720px) {
   nav { padding: 20px 24px; }
   nav ul { gap: 20px; }
-  section { padding: 80px 24px; }
-  .cols, .cols.cols-2 { grid-template-columns: 1fr; gap: 40px; }
+  section { padding: 48px 24px; }
+  .cols, .cols.cols-2 { grid-template-columns: 1fr; gap: 28px; }
   footer { padding: 32px 24px; }
-  section h2 { font-size: 38px; margin-bottom: 48px; }
-  .lede { margin-top: -24px; margin-bottom: 48px; font-size: 18px; }
-  .section-foot { margin-top: 40px; }
-  .book-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+  section h2 { font-size: 38px; margin-bottom: 28px; }
+  .lede { margin-top: -12px; margin-bottom: 28px; font-size: 18px; }
+  .section-foot { margin-top: 24px; }
+  .book-card { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
   .book-card-cover { max-width: 200px; }
   .book-card-body h3 { font-size: 28px; }
-  .book-layout { grid-template-columns: 1fr; gap: 40px; }
+  .book-layout { grid-template-columns: 1fr; gap: 32px; }
   .book-cover { max-width: 280px; margin: 0 auto; }
-  .book-detail { padding: 60px 24px 80px; }
+  .book-detail { padding: 40px 24px 56px; }
 }
