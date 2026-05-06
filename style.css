@@ -461,6 +461,7 @@ a.col:hover h3 { color: var(--teal-bright); }
   margin-bottom: 36px;
 }
 .book-body .essay { max-width: 640px; }
+.book-body .essay p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
 /* ---------- Footer ---------- */
 footer {
