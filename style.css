@@ -105,15 +105,16 @@ nav ul a:hover { color: var(--paper); }
 }
 
 .hero h1 {
-  font-size: clamp(56px, 9vw, 120px);
+  font-size: clamp(48px, 7.5vw, 100px);
   font-weight: 500;
   letter-spacing: -0.03em;
-  line-height: 1.02;
+  line-height: 1.05;
   margin-bottom: 28px;
   position: relative;
-  max-width: 12ch;
+  max-width: 18ch;
 }
 .hero h1 .amp { font-style: italic; color: var(--teal-bright); font-weight: 500; }
+section h2 .amp { font-style: italic; color: var(--teal-bright); font-weight: 500; }
 .hero h1 .apps {
   font-size: 0.5em;
   color: var(--muted);
@@ -216,6 +217,32 @@ section h2 em { color: var(--teal-light); }
 /* 2-col variant for the legal index */
 .cols.cols-2 { grid-template-columns: repeat(2, 1fr); }
 
+/* Section lede paragraph (under h2, above grid) */
+.lede {
+  max-width: 680px;
+  font-size: 21px;
+  line-height: 1.7;
+  color: var(--paper);
+  margin-top: -40px;
+  margin-bottom: 64px;
+}
+
+/* Section foot — small CTA row under cols */
+.section-foot {
+  margin-top: 56px;
+  font-family: 'Inter', sans-serif;
+}
+.link-arrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  border-bottom: 1px solid rgba(59, 179, 201, 0.3);
+  padding-bottom: 4px;
+  transition: color .2s, border-color .2s;
+}
+.link-arrow:hover { color: var(--paper); border-bottom-color: var(--paper); }
+
 /* When cols are links (the index page) */
 a.col {
   color: inherit;
@@ -288,6 +315,153 @@ a.col:hover h3 { color: var(--teal-bright); }
 }
 .back-link:hover { color: var(--teal-bright); }
 
+/* ---------- Book cards (used on home + /books/) ---------- */
+.book-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 32px;
+  margin: 0 0 32px;
+  border: 1px solid rgba(232, 228, 218, 0.08);
+  background: rgba(9, 95, 115, 0.02);
+  color: inherit;
+  transition: background .2s, border-color .2s, transform .2s;
+  align-items: start;
+}
+.book-card:hover {
+  background: rgba(9, 95, 115, 0.06);
+  border-color: rgba(59, 179, 201, 0.25);
+  transform: translateY(-2px);
+}
+.book-card:hover h3 a { color: var(--teal-bright); }
+.book-card-body h3 a { color: inherit; transition: color .2s; }
+.book-card-body h3 a:hover { color: var(--teal-bright); }
+.book-card-cover { display: block; }
+.book-card-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform .2s;
+}
+.book-card-cover:hover img { transform: scale(1.02); }
+.book-card-body h3 {
+  font-size: 32px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 8px 0 12px;
+  line-height: 1.15;
+}
+.book-card-body .num {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  display: block;
+}
+.book-card-body .tagline {
+  color: var(--paper);
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+.book-card-body p { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+
+/* Editions row inside card */
+.editions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 6px;
+  font-family: 'Inter', sans-serif;
+}
+.edition-btn {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid rgba(232, 228, 218, 0.25);
+  color: var(--paper);
+  transition: border-color .2s, background .2s, color .2s;
+}
+.edition-btn:hover {
+  border-color: var(--teal-bright);
+  color: var(--teal-bright);
+  background: rgba(59, 179, 201, 0.06);
+}
+.edition-btn.primary {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.edition-btn.primary:hover {
+  background: var(--teal-light);
+  border-color: var(--teal-light);
+  color: var(--paper);
+}
+.edition-btn.ghost {
+  border-color: transparent;
+  color: var(--muted);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.edition-btn.ghost:hover {
+  border-color: transparent;
+  color: var(--teal-bright);
+  background: transparent;
+}
+
+/* ---------- Book detail page ---------- */
+.book-detail { padding: 80px 56px 130px; max-width: 1080px; margin: 0 auto; border-top: none; }
+.book-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  margin-top: 32px;
+  align-items: start;
+}
+.book-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.book-meta {
+  margin-top: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+.book-meta .meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(232, 228, 218, 0.08);
+}
+.book-meta .meta-row span:first-child {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.book-meta .meta-row span:last-child { color: var(--paper); text-align: right; }
+
+.buy-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.buy-stack .btn { text-align: center; }
+
+.book-body h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 14px 0 18px;
+}
+.book-body .tagline {
+  font-size: 22px;
+  color: var(--teal-light);
+  margin-bottom: 36px;
+}
+.book-body .essay { max-width: 640px; }
+
 /* ---------- Footer ---------- */
 footer {
   padding: 48px 56px;
@@ -307,6 +481,10 @@ footer .amp {
   font-style: italic;
   font-family: 'EB Garamond', Georgia, serif;
 }
+.footer-legal { display: flex; gap: 12px; align-items: center; }
+.footer-legal a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.footer-legal a:hover { color: var(--paper); border-bottom-color: rgba(232, 228, 218, 0.3); }
+.footer-legal .sep { opacity: 0.5; }
 
 @media (max-width: 720px) {
   nav { padding: 20px 24px; }
@@ -315,4 +493,12 @@ footer .amp {
   .cols, .cols.cols-2 { grid-template-columns: 1fr; gap: 40px; }
   footer { padding: 32px 24px; }
   section h2 { font-size: 38px; margin-bottom: 48px; }
+  .lede { margin-top: -24px; margin-bottom: 48px; font-size: 18px; }
+  .section-foot { margin-top: 40px; }
+  .book-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+  .book-card-cover { max-width: 200px; }
+  .book-card-body h3 { font-size: 28px; }
+  .book-layout { grid-template-columns: 1fr; gap: 40px; }
+  .book-cover { max-width: 280px; margin: 0 auto; }
+  .book-detail { padding: 60px 24px 80px; }
 }
