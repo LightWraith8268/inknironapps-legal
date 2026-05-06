@@ -464,6 +464,24 @@ a.col:hover h3 { color: var(--teal-bright); }
 .book-body .essay p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
 /* App cards mirror book cards but icon-sized */
+.footer-socials { display: inline-flex; gap: 10px; align-items: center; vertical-align: middle; }
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(232, 228, 218, 0.12);
+  border-radius: 50%;
+  color: inherit;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.footer-socials a:hover {
+  color: var(--teal-bright);
+  border-color: rgba(59, 179, 201, 0.35);
+  background: rgba(9, 95, 115, 0.08);
+}
+
 .app-card {
   display: grid;
   grid-template-columns: 120px 1fr;
