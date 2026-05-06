@@ -463,6 +463,30 @@ a.col:hover h3 { color: var(--teal-bright); }
 .book-body .essay { max-width: 640px; }
 .book-body .essay p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
+.author-contact {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(232, 228, 218, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+.author-contact span {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.author-contact a {
+  color: var(--teal-bright);
+  border-bottom: 1px solid rgba(59, 179, 201, 0.3);
+  width: fit-content;
+}
+.author-contact a:hover { border-bottom-color: var(--teal-bright); }
+
 /* ---------- Footer ---------- */
 footer {
   padding: 48px 56px;
