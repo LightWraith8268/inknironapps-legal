@@ -72,7 +72,12 @@ All addresses are Hostinger Business Starter aliases → forward to single `info
 - `abuse@inknironapps.com` — RFC 2142 spam complaints (no site placement)
 - `security@inknironapps.com` — RFC 9116 vulnerability reports → exposed via `/.well-known/security.txt`
 
-Author Facebook → `https://www.facebook.com/people/Riley-E-Antrobus/61580037872318/` (footers + About + book pages)
+Social links (footer icons + book author-contact cards + home About + Person JSON-LD `sameAs`):
+- Facebook → `https://www.facebook.com/people/Riley-E-Antrobus/61580037872318/`
+- Goodreads → `https://www.goodreads.com/author/show/58136422.Riley_E_Antrobus`
+- Amazon author → `https://www.amazon.com/author/rileyeantrobus`
+
+Footer icons render as inline SVG (Simple Icons CC0 paths) inside `.footer-socials` — circular, `currentColor` fill, hover → teal-bright. Add new socials by appending to the `<span class="footer-socials">` block in every page footer + the JSON-LD `sameAs` array on home.
 
 `/.well-known/security.txt` must be kept current. Bump `Expires:` annually before it lapses (current expiry 2027-05-06).
 
@@ -92,3 +97,34 @@ Brand-name domain `inkniron.com` is **taken** (active Ink-N-Iron landing). "Apps
 ## Email aliases (LIVE — Hostinger Business Starter)
 
 8 aliases, all forward to single `info@` mailbox. See "Contacts on site" above for site placement.
+
+## Author copy (sourced from writing vault)
+
+Author bios, book back-matter, and any other Riley-E.-Antrobus marketing copy is **canonically owned by the writing vault** at `D:\Obsidian Vault\My Vault\Author Marketing\`. This site reuses snippets from those files but the vault is the source of truth.
+
+- **`Author Marketing/Author Bio.md`** — long bio, short bio, one-liner, full channel placement table
+- **`Author Marketing/About the Author Page.md`** — KDP back-matter template
+
+When updating author-facing site copy (home About paragraph, book detail descriptions, meta `description`/og copy):
+1. Update vault first if voice/wording is changing.
+2. Mirror the change here.
+3. Don't drift — vault is canonical.
+
+**Channel rules to remember when copying to/from the site:**
+- The site can use the URL `inknironapps.com` and full email addresses freely (it's our own domain).
+- The vault's `Author Bio.md` documents which Amazon channels strip URLs — that constraint applies to KDP/Author Central, not to this site.
+- Voice quirks (e.g. "(oops, spoiler)") are intentional. Keep them.
+
+## Site rebuild from Pages-default
+
+GitHub Pages defaults to Jekyll which strips `.`-prefixed paths. `/.nojekyll` (empty file at repo root) disables Jekyll so `/.well-known/security.txt` is served. Don't delete `.nojekyll`.
+
+## SEO indexing checklist (post-deploy)
+
+Site has full SEO metadata (canonical, OG, Twitter cards, JSON-LD per page type, sitemap, robots, security.txt, `.nojekyll`). Hostinger / generic-advice agents that say "GitHub Pages = no SEO" are running boilerplate scripts and should be ignored unless they cite a specific missing tag verified against the live URL.
+
+For real ranking gains:
+- Google Search Console → Sitemaps → submit `https://inknironapps.com/sitemap.xml`
+- Bing Webmaster Tools → submit same sitemap
+- Resolve any Search Console "Security Issues" / "Deceptive pages" flag → Request Review once site content is honest (alpha apps marked as alpha, no fake store links)
+- Real backlinks (Goodreads Website field, Facebook Website field, KDP back-matter URL) move the needle far more than any extra meta tag.
