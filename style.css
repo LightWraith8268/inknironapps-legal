@@ -464,6 +464,45 @@ a.col:hover h3 { color: var(--teal-bright); }
 .book-body .essay p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
 /* App cards mirror book cards but icon-sized */
+/* ---------- Contact form ---------- */
+.contact-page { max-width: 720px; margin: 0 auto; padding: 56px 56px 80px; }
+.contact-status { margin: 0 0 28px; padding: 14px 18px; border-radius: 0; font-family: 'Inter', sans-serif; font-size: 14px; display: none; }
+.contact-status.success { display: block; background: rgba(9, 95, 115, 0.18); border-left: 3px solid var(--teal-bright); color: var(--paper); }
+.contact-status.error { display: block; background: rgba(170, 60, 60, 0.18); border-left: 3px solid #c75050; color: var(--paper); }
+.contact-form { display: flex; flex-direction: column; gap: 22px; max-width: 640px; }
+.contact-form label { display: flex; flex-direction: column; gap: 6px; font-family: 'Inter', sans-serif; }
+.contact-form label > span {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  padding: 12px 14px;
+  background: rgba(232, 228, 218, 0.04);
+  border: 1px solid rgba(232, 228, 218, 0.14);
+  color: var(--paper);
+  border-radius: 0;
+  transition: border-color .2s, background .2s;
+}
+.contact-form textarea { resize: vertical; min-height: 140px; font-family: 'Inter', sans-serif; line-height: 1.5; }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--teal-bright);
+  background: rgba(9, 95, 115, 0.08);
+}
+.contact-form button { align-self: flex-start; margin-top: 8px; cursor: pointer; }
+.contact-form .honey { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 720px) {
+  .contact-page { padding: 40px 24px 56px; }
+}
+
 .footer-socials { display: inline-flex; gap: 10px; align-items: center; vertical-align: middle; }
 .footer-socials a {
   display: inline-flex;

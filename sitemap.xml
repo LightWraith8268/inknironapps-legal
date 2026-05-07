@@ -61,6 +61,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://inknironapps.com/contact.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://inknironapps.com/privacy-policy.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
