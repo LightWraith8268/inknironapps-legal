@@ -497,6 +497,10 @@ a.col:hover h3 { color: var(--teal-bright); }
   border-color: var(--teal-bright);
   background: rgba(9, 95, 115, 0.08);
 }
+.contact-form select option {
+  background: #0F1115;
+  color: #E8E4DA;
+}
 .contact-form button { align-self: flex-start; margin-top: 8px; cursor: pointer; }
 .contact-form .honey { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 @media (max-width: 720px) {
